@@ -22,6 +22,15 @@ export let popoverTransitionConfig = () => ({
     timing: Animated.timing,
   },
   screenInterpolator: sceneProps => {
-    return { opacity: 1, transform: [{ translateY: 0 }] }
+    const { position, scene } = sceneProps // layout, 
+    const { index } = scene
+    // const width = layout.initWidth
+
+    return {
+      opacity: position.interpolate({
+        inputRange: [index - 1, index, index + 1],
+        outputRange: [0, 1, 1]
+      }),
+      transform: [{ translateY: 0 }] }
   },
 })
