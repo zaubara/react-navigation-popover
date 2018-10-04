@@ -34,6 +34,6 @@
     "react-navigation-stack": ">=0.2.2"
   },
   "dependencies": {
-    "react-native-popover-view": "1.0.8"
+    "react-native-popover-view": "1.0.9"
   }
 }
